@@ -1,5 +1,7 @@
 # Prompt Box Raycast Extension
 
+> **Language / 语言**: [🇺🇸 English](./README.EN.md) | [🇨🇳 中文](./README.md)
+
 一个用于快速管理和使用 Prompt 的 Raycast 扩展。
 
 ## 功能特性
@@ -24,24 +26,55 @@
 
 ## 安装和配置
 
-### 1. 安装依赖
-```bash
-npm install
-```
+### 方法一：永久安装（推荐）
 
-### 2. 配置 API Key
-1. 在 Raycast 中打开扩展设置
-2. 输入从 Prompt Box Web 端获取的 API Key
+如果您不想每次都启动开发服务器，可以将扩展永久安装到 Raycast 中：
 
-### 3. 开发模式
-```bash
-npm run dev
-```
+1. **构建扩展**
+   ```bash
+   npm install
+   npm run build
+   ```
 
-### 4. 构建扩展
-```bash
-npm run build
-```
+2. **在 Raycast 中导入扩展**
+   - 打开 Raycast 设置（⌘ + ,）
+   - 进入 "Extensions" 标签
+   - 点击右上角的 "+" 按钮
+   - 选择 "Add Script Directory" 或 "Import Extension"
+   - 选择项目文件夹
+
+3. **配置 API Key**
+   - 在扩展设置中输入从 Prompt Box Web 端获取的 API Key
+   - 扩展将永久可用，无需开发服务器
+
+### 方法二：通过 Raycast Store 安装
+
+> 📝 **注意**: 此扩展尚未发布到 Raycast Store，敬请稍后。
+
+发布后您可以：
+1. 打开 Raycast 设置
+2. 进入 "Extensions" 标签
+3. 点击 "Browse Store"
+4. 搜索 "Prompt Box"
+5. 点击安装
+
+### 方法三：开发模式
+
+如果您需要修改代码或进行开发：
+
+1. **安装依赖**
+   ```bash
+   npm install
+   ```
+
+2. **启动开发模式**
+   ```bash
+   npm run dev
+   ```
+
+3. **配置 API Key**
+   - 在 Raycast 中打开扩展设置
+   - 输入从 Prompt Box Web 端获取的 API Key
 
 ## API 接口
 

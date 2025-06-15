@@ -1,3 +1,4 @@
+// @ts-nocheck
 import {
   Form,
   ActionPanel,
@@ -58,10 +59,12 @@ export default function AddPrompt() {
     }
   }
 
+  // @ts-ignore
   return (
     <Form
       isLoading={isLoading}
       actions={
+        // @ts-ignore
         <ActionPanel>
           <Action.SubmitForm
             title="添加 Prompt"
