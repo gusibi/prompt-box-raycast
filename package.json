@@ -1,0 +1,65 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "prompt-base",
+  "title": "Prompt Base",
+  "description": "快速管理和使用 Prompt 的 Raycast 扩展",
+  "icon": "command-icon.png",
+  "author": "gusi",
+  "categories": [
+    "Productivity",
+    "Developer Tools"
+  ],
+  "license": "MIT",
+  "commands": [
+    {
+      "name": "search-prompts",
+      "title": "Search Prompts",
+      "description": "搜索和使用 Prompts",
+      "mode": "view",
+      "aliases": ["sp", "search prompts", "find prompt"]
+    },
+    {
+      "name": "add-prompt",
+      "title": "Add Prompt",
+      "description": "快速添加新的 Prompt",
+      "mode": "view",
+      "aliases": ["ap", "add prompt", "new prompt"]
+    },
+    {
+      "name": "sync-prompts",
+      "title": "Sync Prompts",
+      "description": "同步服务端数据到本地",
+      "mode": "no-view"
+    }
+  ],
+  "preferences": [
+    {
+      "name": "apiKey",
+      "type": "password",
+      "required": true,
+      "title": "API Key",
+      "description": "从 Web 端获取的 API Key",
+      "placeholder": "请输入您的 API Key"
+    }
+  ],
+  "dependencies": {
+    "@raycast/api": "^1.62.0",
+    "@raycast/utils": "^1.10.0",
+    "node-fetch": "^3.3.2"
+  },
+  "devDependencies": {
+    "@raycast/eslint-config": "1.0.6",
+    "@types/node": "18.8.3",
+    "@types/react": "18.0.9",
+    "eslint": "^8.51.0",
+    "prettier": "^3.0.0",
+    "typescript": "^5.2.2"
+  },
+  "scripts": {
+    "build": "ray build -e dist",
+    "dev": "ray develop",
+    "fix-lint": "ray lint --fix",
+    "lint": "ray lint",
+    "publish": "npx @raycast/api@latest publish"
+  }
+}
