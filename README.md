@@ -1,4 +1,4 @@
-# Prompt Base Raycast Extension
+# Prompt Box Raycast Extension
 
 一个用于快速管理和使用 Prompt 的 Raycast 扩展。
 
@@ -31,7 +31,7 @@ npm install
 
 ### 2. 配置 API Key
 1. 在 Raycast 中打开扩展设置
-2. 输入从 Prompt Base Web 端获取的 API Key
+2. 输入从 Prompt Box Web 端获取的 API Key
 
 ### 3. 开发模式
 ```bash

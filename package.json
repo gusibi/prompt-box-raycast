@@ -1,7 +1,7 @@
 {
   "$schema": "https://www.raycast.com/schemas/extension.json",
   "name": "prompt-base",
-  "title": "Prompt Base",
+  "title": "Prompt Box",
   "description": "快速管理和使用 Prompt 的 Raycast 扩展",
   "icon": "command-icon.png",
   "author": "gusi",
