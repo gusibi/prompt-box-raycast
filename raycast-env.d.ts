@@ -8,7 +8,7 @@
 /* eslint-disable @typescript-eslint/ban-types */
 
 type ExtensionPreferences = {
-  /** API Key - 从 Web 端获取的 API Key */
+  /** API Key - API Key obtained from the web interface */
   "apiKey": string
 }
 

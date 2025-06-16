@@ -1,8 +1,8 @@
 {
   "$schema": "https://www.raycast.com/schemas/extension.json",
-  "name": "prompt-base",
+  "name": "prompt-box",
   "title": "Prompt Box",
-  "description": "快速管理和使用 Prompt 的 Raycast 扩展",
+  "description": "A Raycast extension for quick prompt management and usage",
   "icon": "command-icon.png",
   "author": "gusi",
   "categories": [
@@ -14,21 +14,21 @@
     {
       "name": "search-prompts",
       "title": "Search Prompts",
-      "description": "搜索和使用 Prompts",
+      "description": "Search and use prompts",
       "mode": "view",
       "aliases": ["sp", "search prompts", "find prompt"]
     },
     {
       "name": "add-prompt",
       "title": "Add Prompt",
-      "description": "快速添加新的 Prompt",
+      "description": "Quickly add new prompts",
       "mode": "view",
       "aliases": ["ap", "add prompt", "new prompt"]
     },
     {
       "name": "sync-prompts",
       "title": "Sync Prompts",
-      "description": "同步服务端数据到本地",
+      "description": "Sync server data to local cache",
       "mode": "no-view"
     }
   ],
@@ -38,8 +38,8 @@
       "type": "password",
       "required": true,
       "title": "API Key",
-      "description": "从 Web 端获取的 API Key",
-      "placeholder": "请输入您的 API Key"
+      "description": "API Key obtained from the web interface",
+      "placeholder": "Enter your API Key"
     }
   ],
   "dependencies": {
