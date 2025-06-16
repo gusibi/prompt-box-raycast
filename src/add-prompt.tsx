@@ -10,6 +10,7 @@ import {
 import { useState } from "react";
 import { createPrompt } from "./api";
 import { CreatePromptRequest } from "./types";
+import { getCachedPrompts, setCachedPrompts } from "./storage";
 
 interface FormValues {
   title: string;
@@ -37,7 +38,17 @@ export default function AddPrompt() {
         content: values.content.trim(),
       };
 
-      await createPrompt(promptData);
+      const newPrompt = await createPrompt(promptData);
+
+      // 将新添加的 prompt 加入到本地缓存中
+      try {
+        const cachedPrompts = await getCachedPrompts();
+        const updatedPrompts = [newPrompt, ...cachedPrompts];
+        await setCachedPrompts(updatedPrompts);
+      } catch (cacheError) {
+        console.error("Failed to update cache:", cacheError);
+        // 缓存更新失败不影响主流程，只记录错误
+      }
 
       showToast({
         style: Toast.Style.Success,
