@@ -5,6 +5,8 @@
 
 A Raycast extension for quickly managing and using Prompts.
 
+**This extension is the official Raycast client for [pb.onlinestool.com](https://pb.onlinestool.com), allowing you to manage your saved prompts directly from Raycast.**
+
 ## Features
 
 ### 🔍 Search Prompts

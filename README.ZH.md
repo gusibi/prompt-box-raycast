@@ -4,6 +4,8 @@
 
 一个用于快速管理和使用 Prompt 的 Raycast 扩展。
 
+**这个扩展是 [pb.onlinestool.com](https://pb.onlinestool.com) 的官方 Raycast 客户端，让您可以直接在 Raycast 中管理您收藏的 prompts。**
+
 ## 功能特性
 
 ### 🔍 Search Prompts (搜索/调用)
