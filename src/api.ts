@@ -27,7 +27,7 @@ export async function fetchPrompts(): Promise<Prompt[]> {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
 
-    const data = await response.json() as ApiResponse<Prompt[]>;
+    const data = (await response.json()) as ApiResponse<Prompt[]>;
     return data.data || [];
   } catch (error) {
     console.error("Failed to fetch prompts:", error);
@@ -47,7 +47,7 @@ export async function createPrompt(prompt: CreatePromptRequest): Promise<Prompt>
       throw new Error(`HTTP error! status: ${response.status}`);
     }
 
-    const data = await response.json() as ApiResponse<Prompt>;
+    const data = (await response.json()) as ApiResponse<Prompt>;
     if (!data.data) {
       throw new Error("No data returned from API");
     }

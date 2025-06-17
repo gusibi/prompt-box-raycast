@@ -1,32 +1,17 @@
-// @ts-nocheck
-import {
-  List,
-  Detail,
-  ActionPanel,
-  Action,
-  showToast,
-  Toast,
-  Clipboard,
-} from "@raycast/api";
+import { List, Detail, ActionPanel, Action, showToast, Toast, Clipboard } from "@raycast/api";
 import { useState, useEffect } from "react";
 import { getCachedPrompts } from "./storage";
 import { Prompt } from "./types";
-
-interface Preferences {
-  apiKey: string;
-}
 
 function PromptDetail({ prompt }: { prompt: Prompt }) {
   const markdown = `# ${prompt.title}
 
 ${prompt.description ? `**Description:** ${prompt.description}\n\n` : ""}**Content:**\n\n\`\`\`\n${prompt.content}\n\`\`\`\n\n${prompt.tags && prompt.tags.length > 0 ? `**Tags:** ${prompt.tags.join(", ")}` : ""}`;
 
-  // @ts-ignore
   return (
     <Detail
       markdown={markdown}
       actions={
-        // @ts-ignore
         <ActionPanel>
           <Action.CopyToClipboard
             title="Copy Content"
@@ -88,7 +73,7 @@ export default function SearchPrompts() {
     showToast({
       style: Toast.Style.Success,
       title: "Copied",
-        message: "Prompt content copied to clipboard",
+      message: "Prompt content copied to clipboard",
     });
   }
 
@@ -97,11 +82,10 @@ export default function SearchPrompts() {
     showToast({
       style: Toast.Style.Success,
       title: "Pasted",
-        message: "Prompt content pasted to frontmost application",
+      message: "Prompt content pasted to frontmost application",
     });
   }
 
-  // @ts-ignore
   return (
     <List
       isLoading={loading}
@@ -112,7 +96,11 @@ export default function SearchPrompts() {
       {filteredPrompts.length === 0 && !loading ? (
         <List.EmptyView
           title="No Prompts Found"
-        description={searchText ? "Try searching with different keywords" : "Please sync data first or add new prompts"}
+          description={
+            searchText
+              ? "Try searching with different keywords"
+              : "Please sync data first or add new prompts"
+          }
         />
       ) : (
         filteredPrompts.map((prompt, index) => (
@@ -120,11 +108,8 @@ export default function SearchPrompts() {
             key={prompt.id || index}
             title={prompt.title}
             subtitle={prompt.description}
-            accessories={[
-              ...(prompt.tags || []).map((tag) => ({ text: tag })),
-            ]}
+            accessories={[...(prompt.tags || []).map((tag) => ({ text: tag }))]}
             actions={
-              // @ts-ignore
               <ActionPanel>
                 <Action
                   title="Copy to Clipboard"

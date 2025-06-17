@@ -1,12 +1,4 @@
-// @ts-nocheck
-import {
-  Form,
-  ActionPanel,
-  Action,
-  showToast,
-  Toast,
-  popToRoot,
-} from "@raycast/api";
+import { Form, ActionPanel, Action, showToast, Toast, popToRoot } from "@raycast/api";
 import { useState } from "react";
 import { createPrompt } from "./api";
 import { CreatePromptRequest } from "./types";
@@ -70,12 +62,10 @@ export default function AddPrompt() {
     }
   }
 
-  // @ts-ignore
   return (
     <Form
       isLoading={isLoading}
       actions={
-        // @ts-ignore
         <ActionPanel>
           <Action.SubmitForm
             title="Add Prompt"
@@ -85,12 +75,7 @@ export default function AddPrompt() {
         </ActionPanel>
       }
     >
-      <Form.TextField
-        id="title"
-        title="Title"
-        placeholder="Enter prompt title"
-        autoFocus
-      />
+      <Form.TextField id="title" title="Title" placeholder="Enter prompt title" autoFocus />
       <Form.TextArea
         id="content"
         title="Content"

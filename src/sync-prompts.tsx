@@ -32,11 +32,12 @@ export default async function SyncPrompts() {
     await closeMainWindow();
   } catch (error) {
     console.error("Sync failed:", error);
-    
+
     await showToast({
       style: Toast.Style.Failure,
       title: "Sync Failed",
-      message: error instanceof Error ? error.message : "Please check network connection and API Key",
+      message:
+        error instanceof Error ? error.message : "Please check network connection and API Key",
     });
   }
 }
